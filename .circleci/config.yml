@@ -16,11 +16,6 @@ jobs:
 
       # - run: git submodule sync && git submodule update --init
 
-      - run:
-          name: "Install AWS CLI( first install pip, the python package manager)"
-          command: |
-            sudo apt-get install awscli
-
       # build with Hugo      
       - run:
           name: "Run Hugo"
@@ -28,3 +23,9 @@ jobs:
       - run:
           name: "Test Website"
           command: htmlproofer ~/myblog/public/ --allow-hash-href --check-html --empty-alt-ignore --disable-external
+
+      - run:
+          name: "Install AWS CLI( first install pip, the python package manager)"
+          command: |
+            sudo apt-get install awscli
+            aws s3 sync public/ s3://tenzintenzin.com/
