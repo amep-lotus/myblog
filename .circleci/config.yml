@@ -24,7 +24,7 @@ jobs:
       # build with Hugo      
       - run:
           name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s $HUGO_BUILD_DIR
+          command: HUGO_ENV=production hugo -v -s ~/myblog/
       - run:
           name: "Test Website"
           command: htmlproofer ~/myblog/public/ --allow-hash-href --check-html --empty-alt-ignore --disable-external
