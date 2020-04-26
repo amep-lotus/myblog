@@ -28,4 +28,13 @@ jobs:
           name: "Test Website"
           command: htmlproofer ~/myblog/public/ --allow-hash-href --check-html --empty-alt-ignore --disable-external
 
-            
+      # Deploy
+      -deploy:
+          name: deploy to AWS\
+          command |
+          if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              aws s3 sync public/ s3://tenzintenzin.com             
+            else
+              echo "Not master branch, dry run only"
+            fi
+           
