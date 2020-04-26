@@ -3,12 +3,12 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:0.54
-    working_directory: ~/meghna-hugo
+    working_directory: ~/myblog
     steps:
       - checkout
       - run:
           name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s ~/meghna-hugo/themes
+          command: HUGO_ENV=production hugo -v -s ~/myblog/themes
       - run:
           name: "Test Website"
-          command: htmlproofer ~/meghna-hugo/themes/public --allow-hash-href --check-html --empty-alt-ignore --disable-externalgit 
+          command: htmlproofer ~/myblog/themes/public --allow-hash-href --check-html --empty-alt-ignore --disable-externalgit 
