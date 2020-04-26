@@ -11,4 +11,4 @@ jobs:
           command: HUGO_ENV=production hugo -v -s ~/myblog/
       - run:
           name: "Test Website"
-          command: htmlproofer ~/myblog/themes/meghna-hugo/ --allow-hash-href --check-html --empty-alt-ignore --disable-externalgit 
+          command: htmlproofer ~/myblog/public/ --allow-hash-href --check-html --empty-alt-ignore --disable-externalgit 
