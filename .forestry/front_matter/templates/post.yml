@@ -22,5 +22,3 @@ fields:
   name: description
   label: description
   description: meta description
-pages:
-- exampleSite/testing-website-with-circle-ci.toml
