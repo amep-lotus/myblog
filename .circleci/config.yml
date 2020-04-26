@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:0.54
+    working_directory: ~/myblog
+    steps:
+      - checkout
+      - run:
+          name: "Run Hugo"
+          command: HUGO_ENV=production hugo -v -s ~/myblog/meghna-hugo/
+      - run:
+          name: "Test Website"
+          command: htmlproofer ~/myblog/meghna-hugo/public --allow-hash-href --check-html --empty-alt-ignore --disable-externalgit 
