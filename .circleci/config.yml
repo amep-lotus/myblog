@@ -19,7 +19,7 @@ jobs:
       - run:
           name: "Install AWS CLI( first install pip, the python package manager)"
           command: |
-            apk add --update python python-dev py-pip build-base
+            sudo apt-get install python python-dev py-pip build-base
             pip install awscli
 
       # build with Hugo      
