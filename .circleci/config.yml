@@ -8,7 +8,7 @@ jobs:
         HUGO_BUILD_DIR: ~/myblog/
     steps:
        # install git
-      - run: apt-get update && apt-get add git
+      - run: sudo apt-get update && apt-get add git
 
       - checkout
 
