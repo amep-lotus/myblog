@@ -36,4 +36,4 @@ jobs:
               aws s3 sync public/ s3://tenzintenzin.com             
             else
               echo "Not master branch, dry run only"
-            fi
+          fi
