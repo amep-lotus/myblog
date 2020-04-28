@@ -29,7 +29,7 @@ jobs:
           command: htmlproofer ~/myblog/public/ --allow-hash-href --check-html --empty-alt-ignore --disable-external
 
       # Deploy
-      -deploy:
+      - deploy:
           name: deploy to AWS
           command: |
           if [ "${CIRCLE_BRANCH}" = "master" ]; then
