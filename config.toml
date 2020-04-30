@@ -2,4 +2,3 @@ baseURL = "http://pemazomkyi.com"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "meghna-hugo"
-disableKinds = ['taxonomyTerm']
