@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://pemazomkyi.com/"
 languageCode = "en-us"
 title = "Anubis"
 theme = "meghna-hugo"
@@ -19,19 +19,19 @@ googleAnalytics = ""
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about/"
+    url = "about"
     weight = 1
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
-    url = "/tags/"
+    url = "tags"
     weight = 2
 
   [[menu.main]]
     name = "Archive"
     identifier = "archive"
-    url = "/posts/"
+    url = "posts"
     weight = 3
 
 [taxonomies]
