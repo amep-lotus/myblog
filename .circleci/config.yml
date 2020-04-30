@@ -5,19 +5,21 @@ jobs:
       - image: cibuilds/hugo:latest
     working_directory: ~/myblog
     environment: 
-        HUGO_BUILD_DIR: ~/myblog/
+        HUGO_BUILD_DIR: ~/myblog/public
     steps:
        # install git
       - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends git
       - checkout
 
       # install git submodules for managing third-party dependencies
-       - run: git submodule sync && git submodule update --init
+      - run: git submodule sync && git submodule update --init
+      - checkout
 
       - run:
           name: "Install AWS CLI( first install pip, the python package manager)"
           command: |
             sudo apt-get install awscli
+
       # build with Hugo      
       - run:
           name: "Run Hugo"
