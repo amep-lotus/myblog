@@ -12,8 +12,8 @@ jobs:
       - checkout
 
       # install git submodules for managing third-party dependencies
-      - run: git submodule sync && git submodule update --init
-      - checkout
+      # - run: git submodule sync && git submodule update --init
+      
 
       - run:
           name: "Install AWS CLI( first install pip, the python package manager)"
