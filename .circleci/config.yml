@@ -35,7 +35,7 @@ jobs:
           name: deploy to AWS
           command: |
               if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
-                  echo "push to s3 write above code"           
+                  aws s3 sync public/ s3://pemazomkyi.com/ --delete           
                 else
                   echo "Not master branch, dry run only"
               fi
