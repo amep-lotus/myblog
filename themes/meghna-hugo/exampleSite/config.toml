@@ -1,7 +1,7 @@
 baseURL = "https://pemazomkyi.com"
 languageCode = "en-us"
-title = "Anubis"
-theme = "anubis"
+title = "My Blog"
+theme = "meghna-hugo"
 paginate = 3
 
 disqusShortname = ""
