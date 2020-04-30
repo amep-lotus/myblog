@@ -1,40 +1,4 @@
-baseURL = "https://pemazomkyi.com"
+baseURL = "http://pemazomkyi.com"
 languageCode = "en-us"
-title = "My Blog"
+title = "My New Hugo Site"
 theme = "meghna-hugo"
-paginate = 3
-
-disqusShortname = ""
-googleAnalytics = ""
-
-[author]
-  name = "Dmitry Kolosov"
-
-[params]
-   author = "Dmitry Kolosov"
-   description = "Anubis is a simple minimalist theme for Hugo blog engine."
-
-[menu]
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 1
-
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 2
-
-  [[menu.main]]
-    name = "Archive"
-    identifier = "archive"
-    url = "/posts/"
-    weight = 3
-
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
